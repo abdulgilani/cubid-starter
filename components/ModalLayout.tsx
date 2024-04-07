@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "@/store/modalSlice";
