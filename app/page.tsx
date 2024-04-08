@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import GenerationStep from "@/components/home/generationStep";
 import Navbar from "@/components/Header";
@@ -9,15 +9,15 @@ import { useRouter } from "next/navigation";
 function Hero() {
   const supabase = createClient();
 
-  const {push} = useRouter()
+  const { push } = useRouter();
 
-  useEffect(()=>{
-    supabase.auth.onAuthStateChange((event,session)=>{
-      if(session?.user){
-        push("/protected")
+  useEffect(() => {
+    supabase.auth.onAuthStateChange((event, session) => {
+      if (session?.user) {
+        push("/protected");
       }
-    })
-  },[])
+    });
+  }, []);
   return (
     <>
       <Navbar />
