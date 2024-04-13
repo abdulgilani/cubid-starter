@@ -19,7 +19,7 @@ export default function ProtectedPage() {
   const fetchDataSchema = {
     get_score: async () => {
       const { data } = await axios.post(
-        "http://localhost:3001/api/dapp/fetch_score",
+        "https://passport.cubid.me/api/dapp/fetch_score",
         {
           apikey: "8c354e51-d323-482a-86ca-e931cd0e91d8",
           uid: uid,
@@ -29,7 +29,7 @@ export default function ProtectedPage() {
     },
     get_identity: async () => {
       const { data } = await axios.post(
-        "http://localhost:3001/api/dapp/get_identity",
+        "https://passport.cubid.me/api/dapp/get_identity",
         {
           apikey: "8c354e51-d323-482a-86ca-e931cd0e91d8",
           uid: uid,
@@ -39,7 +39,7 @@ export default function ProtectedPage() {
     },
     get_score_details: async () => {
       const { data } = await axios.post(
-        "http://localhost:3001/api/dapp/get_score_details",
+        "https://passport.cubid.me/api/dapp/get_score_details",
         {
           apikey: "8c354e51-d323-482a-86ca-e931cd0e91d8",
           uid: uid,
