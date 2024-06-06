@@ -13,8 +13,8 @@ export const updateSession = async (request: NextRequest) => {
     });
 
     const supabase = createServerClient(
-      'https://gcqrpwugnwuprqbbleay.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjcXJwd3Vnbnd1cHJxYmJsZWF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTIwMDEzMTMsImV4cCI6MjAyNzU3NzMxM30.OyhO-x42brB6bha_l4Fen6h-RxrItSvP5IM7ug9f8ag',
+      'https://cggycnbvljcdptzyjpju.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNnZ3ljbmJ2bGpjZHB0enlqcGp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODA0NjI0NzAsImV4cCI6MTk5NjAzODQ3MH0.cIg2RrzebYEWwHfnWPis_nPnFbsqv4EebBVu9NyxdWw',
       {
         cookies: {
           get(name: string) {
