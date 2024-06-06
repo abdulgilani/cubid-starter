@@ -83,6 +83,7 @@ export default function ProtectedPage() {
                 {
                   dapp_id: 34,
                   email,
+                  stamptype: "email",
                 }
               );
               const { uuid, newuser } = data;
