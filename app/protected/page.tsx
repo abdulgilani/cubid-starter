@@ -60,8 +60,6 @@ export default function ProtectedPage() {
     });
   }, [supabase]);
 
-  const { score, identity, score_details } = apiData;
-
   return (
     <div className="flex-1 w-full flex flex-col gap-20 items-center">
       <div className="w-full">
