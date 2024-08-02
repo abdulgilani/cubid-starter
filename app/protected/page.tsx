@@ -21,7 +21,7 @@ export default function ProtectedPage() {
       const { data } = await axios.post(
         "https://passport.cubid.me/api/dapp/fetch_score",
         {
-          apikey: "8c354e51-d323-482a-86ca-e931cd0e91d8",
+          apikey: process.env.NEXT_PUBLIC_CUBID_SECRET_KEY,
           uid: uid,
         }
       );
@@ -31,7 +31,7 @@ export default function ProtectedPage() {
       const { data } = await axios.post(
         "https://passport.cubid.me/api/dapp/get_identity",
         {
-          apikey: "8c354e51-d323-482a-86ca-e931cd0e91d8",
+          apikey: process.env.NEXT_PUBLIC_CUBID_SECRET_KEY,
           uid: uid,
         }
       );
@@ -41,7 +41,7 @@ export default function ProtectedPage() {
       const { data } = await axios.post(
         "https://passport.cubid.me/api/dapp/get_score_details",
         {
-          apikey: "8c354e51-d323-482a-86ca-e931cd0e91d8",
+          apikey: process.env.NEXT_PUBLIC_CUBID_SECRET_KEY,
           uid: uid,
         }
       );
@@ -79,7 +79,7 @@ export default function ProtectedPage() {
               const { data } = await axios.post(
                 "https://passport.cubid.me/api/dapp/create_user",
                 {
-                  dapp_id: 34,
+                  dapp_id: process.env.NEXT_PUBLIC_CUBID_APP_ID,
                   email,
                   stamptype: "email",
                 }
