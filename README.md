@@ -1,35 +1,33 @@
-# Next.js Project Setup with Integrations
+## Getting Started
 
-## Fork and Clone the Repository
-1. Fork this repository to your GitHub account.
-2. Clone the forked repository to your local development environment.
+Follow these steps to set up and start developing your project:
 
-## Set Up Supabase
-1. Create a new project on Supabase.
-2. Note down the Supabase API keys: `SUPABASE_URL` and `SUPABASE_ANON_KEY`.
+1. **Fork the Repo**
+   - Fork the repository and clone it to your local machine.
+   - [Link to the repository](#)
 
-## Deploy to Vercel
-1. Deploy your Next.js app on Vercel for easy and scalable hosting.
-2. During deployment, add the Supabase API keys to your Vercel environment variables:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+2. **Set Up Your Supabase Project**
+   - Go to [Supabase](https://supabase.io/) and create a new project.
+   - Get your Supabase URL and anon key from the Supabase dashboard.
 
-## Integrate with Cubid.me
-1. Create an account at [Cubid.me](https://admin.cubid.me).
-2. After signing in, create a new application within Cubid.me.
-3. Obtain your Cubid.me API keys:
-   - `NEXT_PUBLIC_CUBID_APP_ID`
-   - `NEXT_PUBLIC_CUBID_SECRET_KEY`
+3. **Sign Up for an App at Cubid**
+   - Go to [Cubid Admin](https://admin.cubid.me) and sign up for an app.
+   - Obtain your Cubid keys from the Cubid dashboard.
 
-## Configure Environment Variables
-1. In your local environment or on Vercel, add the Cubid.me API keys:
-   - `NEXT_PUBLIC_CUBID_APP_ID`
-   - `NEXT_PUBLIC_CUBID_SECRET_KEY`
+4. **Deploy on Vercel or Netlify**
+   - Deploy your project on [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
+   - Add your Supabase keys and Cubid keys to the environment variables in your deployment settings.
+     ```plaintext
+     NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
+     NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
+     NEXT_PUBLIC_CUBID_API_KEY=<your-cubid-api-key>
+     NEXT_PUBLIC_CUBID_APP_ID=<your-cubid-app-id>
+     ```
 
-## Finalize Setup
-1. Ensure all environment variables are correctly set up in your development and production environments.
-2. Run your Next.js application locally to verify the integration and deployment setup.
+5. **Sign In and Experiment with the Cubid APIs**
+   - Sign in to your deployed app.
+   - Experiment with the Cubid APIs to familiarize yourself with the available functionalities.
 
-## Start Developing
-1. With everything set up, you can now start developing your application using Next.js.
-2. Remember to regularly push your changes to your GitHub repository and redeploy your project on Vercel.
+6. **Start Developing**
+   - Begin developing your project by adding new features, fixing bugs, and improving the codebase.
+   - Use the documentation and resources available for Supabase and Cubid to aid your development process.
