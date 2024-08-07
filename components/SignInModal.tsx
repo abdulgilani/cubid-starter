@@ -279,6 +279,8 @@ function SignInModalBody({ closeModal, extraObject }) {
               {isOtpSent ? `Verify` : `Get Verification Code`}
             </button>
 
+{/* Comment out the Google button and signin/signup logic */}
+{/* 
             {isSignIn ? (
               <div className="text-center mt-4">
                 {`Don't have an account yet?`}
@@ -324,6 +326,7 @@ function SignInModalBody({ closeModal, extraObject }) {
                 <p>Sign in with Google</p>
               </div>
             </button>
+*/}
           </form>
         </div>
       </div>
