@@ -21,7 +21,7 @@ export default function ProtectedPage() {
       const { data } = await axios.post(
         "https://passport.cubid.me/api/dapp/fetch_score",
         {
-          apikey: process.env.NEXT_PUBLIC_CUBID_SECRET_KEY,
+          apikey: process.env.NEXT_PUBLIC_CUBID_API_KEY,
           uid: uid,
         }
       );
@@ -31,7 +31,7 @@ export default function ProtectedPage() {
       const { data } = await axios.post(
         "https://passport.cubid.me/api/dapp/get_identity",
         {
-          apikey: process.env.NEXT_PUBLIC_CUBID_SECRET_KEY,
+          apikey: process.env.NEXT_PUBLIC_CUBID_API_KEY,
           uid: uid,
         }
       );
@@ -41,7 +41,7 @@ export default function ProtectedPage() {
       const { data } = await axios.post(
         "https://passport.cubid.me/api/dapp/get_score_details",
         {
-          apikey: process.env.NEXT_PUBLIC_CUBID_SECRET_KEY,
+          apikey: process.env.NEXT_PUBLIC_CUBID_API_KEY,
           uid: uid,
         }
       );
