@@ -21,7 +21,6 @@ Follow these steps to set up and start developing your project:
      NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
      NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
      NEXT_PUBLIC_CUBID_API_KEY=<your-cubid-api-key>
-     NEXT_PUBLIC_CUBID_APP_ID=<your-cubid-app-id>
      ```
 
 5. **Sign In and Experiment with the Cubid APIs**

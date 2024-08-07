@@ -79,7 +79,7 @@ export default function ProtectedPage() {
               const { data } = await axios.post(
                 "https://passport.cubid.me/api/dapp/create_user",
                 {
-                  dapp_id: process.env.NEXT_PUBLIC_CUBID_APP_ID,
+                  dapp_id: process.env.NEXT_PUBLIC_CUBID_API_KEY,
                   email,
                   stamptype: "email",
                 }
