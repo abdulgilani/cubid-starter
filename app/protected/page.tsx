@@ -1,10 +1,11 @@
 "use client";
 import { createClient } from "@/utils/supabase/client";
 import axios from "axios";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function ProtectedPage() {
+  const { push } = useRouter();
   const supabase = createClient();
   const [uid, setUid] = useState(0);
   const [userCreated, setUserCreated] = useState(false);
@@ -53,7 +54,7 @@ export default function ProtectedPage() {
     supabase.auth.onAuthStateChange((event, session) => {
       console.log(session?.user?.email);
       if (!session?.user?.email) {
-        return redirect("/login");
+        return push("/");
       } else {
         setEmail(session?.user?.email ?? "");
       }
@@ -93,11 +94,11 @@ export default function ProtectedPage() {
           >
             Get Uuid
           </button>
-           <button
+          <button
             onClick={async (e) => {
               e.preventDefault();
-             await supabase.auth.signOut();
-             window.location.href = window.location.origin;
+              await supabase.auth.signOut();
+              window.location.href = window.location.origin;
             }}
             type="submit"
             className="btn btn-accent w-full"
