@@ -93,6 +93,16 @@ export default function ProtectedPage() {
           >
             Get Uuid
           </button>
+           <button
+            onClick={async (e) => {
+              e.preventDefault();
+             await supabase.auth.signOut();
+            }}
+            type="submit"
+            className="btn btn-accent w-full"
+          >
+            Sign Out
+          </button>
           <p>Uuid created for user - {uid}</p>
           <p>New User Created - {userCreated ? "TRUE" : "FALSE"}</p>
           <form className="max-w-sm mx-auto">
