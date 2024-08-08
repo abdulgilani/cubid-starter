@@ -52,7 +52,7 @@ export default function ProtectedPage() {
   useEffect(() => {
     supabase.auth.onAuthStateChange((event, session) => {
       console.log(session?.user?.email);
-      if (!session?.user) {
+      if (!session?.user?.email) {
         return redirect("/login");
       } else {
         setEmail(session?.user?.email ?? "");
