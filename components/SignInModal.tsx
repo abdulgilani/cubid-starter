@@ -158,7 +158,7 @@ function SignInModalBody({ closeModal, extraObject }) {
       <div className="grid grid-cols-1 md:grid-cols-2 w-full ">
         <div className="text-center rounded-xl bg-slate-100 dark:bg-gray-600 ">
           <div className="mt-10 md:mb-0 mb-10 inline-block">
-            <span className="font-bold text-2xl">Cubid Starter</span>
+            <span className="font-bold text-2xl">SpareChange</span>
             <div className="carousel   mt-6 w-full">
               {SIGN_UP_IMAGES.map((img, k) => {
                 return (
@@ -233,7 +233,7 @@ function SignInModalBody({ closeModal, extraObject }) {
                         value: e.target.value,
                       })
                     }
-                    className="input  input-bordered input-primary w-full "
+                    className="input  input-bordered border-green-500 w-full "
                   />
                 </div>
               )}
@@ -259,7 +259,7 @@ function SignInModalBody({ closeModal, extraObject }) {
                         value: e.target.value,
                       })
                     }
-                    className="input  input-bordered input-primary w-full "
+                    className="input  input-bordered border-blue-500 w-full "
                   />
                 </div>
               )}
@@ -273,7 +273,7 @@ function SignInModalBody({ closeModal, extraObject }) {
             {/* <div className="badge badge-secondary float-right ml-2 normal-case">Get 5 Credits FREE</div> */}
             <button
               type="submit"
-              className={"btn mt-2 normal-case w-full btn-primary text-white  "}
+              className={"btn mt-2 normal-case w-full bg-green-500 text-white  "}
             >
               {loading && <span className="loading loading-spinner"></span>}
               {isOtpSent ? `Verify` : `Get Verification Code`}

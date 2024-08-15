@@ -16,7 +16,7 @@ function Navbar() {
 
           <div className="md:flex-1 flex-none px-2">
             <Link href="/">
-              <span className="font-bold text-xl">Cubid Micro App</span>
+              <span className="font-bold text-xl">SpareChange</span>
             </Link>
           </div>
         </div>

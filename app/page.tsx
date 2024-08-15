@@ -21,7 +21,7 @@ function Hero() {
   return (
     <>
       <Navbar />
-      <div className="hero py-12 bg-gradient-to-t from-blue-500 to-purple-700">
+      <div className="hero min-h-screen py-12 bg-gradient-to-t from-blue-500 to-green-700">
         <div className="hero-content md:px-0 px-4 max-w-6xl flex-col lg:flex-row-reverse">
           <img
             src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?auto=format&fit=crop&q=80&w=2831&ixlib=rb-4.0.3"
@@ -29,16 +29,14 @@ function Hero() {
           />
           <div>
             <h1 className="text-5xl text-slate-100 font-bold md:leading-none leading-tight md:mt-0 mt-10">
-              Cubid Micro App Template
+              Welcome to SpareChange
             </h1>
             <p className="py-2 text-xl text-slate-100 mt-4 pr-12">
-              Mciro App to speed up your dev processes when building cubid based
-              apps
+              A simple way to give and recieve help
             </p>
           </div>
         </div>
       </div>
-      <GenerationStep />
     </>
   );
 }
