@@ -61,6 +61,62 @@ export default function ProtectedPage() {
     });
   }, [supabase]);
 
+  const handleGetUuid = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    try {
+      const { data: userData } = await axios.post(
+        "https://passport.cubid.me/api/dapp/create_user",
+        {
+          dapp_id: process.env.NEXT_PUBLIC_CUBID_API_KEY,
+          email,
+          stamptype: "email",
+        }
+      );
+      const { uuid, newuser } = userData;
+      setUserCreated(newuser);
+      setUid(uuid);
+
+      // Checks whether the user exists, if not, then data inserted into table
+      const {data: existingUser, error: fetchError, status} = await supabase 
+        .from('users')
+        .select('cubid_id')
+        .eq('cubid_id', uuid)
+        .single()
+
+      if (fetchError && status !== 406) {
+        console.log(fetchError)
+        throw fetchError
+      }
+
+      if(existingUser){
+        console.log('User exists')
+      } else {
+        const { error: insertError } = await supabase 
+          .from('users')
+          .insert([
+            {
+              cubid_id: uuid,
+              username: "",
+              email,
+              phone: null,
+              persona: null,
+              has_seen_intro: false,
+              auth_user_id: null,
+            }
+          ])
+
+          if(insertError) {
+            console.log('Error inserting user: ', insertError)
+            throw insertError
+          } else {
+            console.log("User successfully inserted into the database")
+          }
+      }
+    } catch (error) {
+      console.error('Error with inserting data into the table: ', error);
+    }
+  }
+
   return (
     <div className="flex-1 w-full flex flex-col gap-20 items-center">
       <div className="w-full">
@@ -75,20 +131,7 @@ export default function ProtectedPage() {
           <h2 className="font-bold text-4xl mb-4">Cubid Integration</h2>
           <p>{email}</p>
           <button
-            onClick={async (e) => {
-              e.preventDefault();
-              const { data } = await axios.post(
-                "https://passport.cubid.me/api/dapp/create_user",
-                {
-                  dapp_id: process.env.NEXT_PUBLIC_CUBID_API_KEY,
-                  email,
-                  stamptype: "email",
-                }
-              );
-              const { uuid, newuser } = data;
-              setUserCreated(newuser);
-              setUid(uuid);
-            }}
+            onClick={handleGetUuid}
             type="submit"
             className="btn btn-accent w-full"
           >
