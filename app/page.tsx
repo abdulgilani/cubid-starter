@@ -21,7 +21,7 @@ function Hero() {
   return (
     <>
       <Navbar />
-      <div className="hero min-h-screen py-12 bg-gradient-to-t from-blue-500 to-green-700">
+      <div className="hero min-h-screen bg-gradient-to-t from-blue-500 to-green-700">
         <div className="hero-content md:px-0 px-4 max-w-6xl flex-col lg:flex-row-reverse">
           <img
             src="https://plus.unsplash.com/premium_photo-1681319553238-9860299dfb0f?auto=format&fit=crop&q=80&w=2831&ixlib=rb-4.0.3"
