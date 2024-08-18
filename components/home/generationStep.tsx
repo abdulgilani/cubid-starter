@@ -32,11 +32,11 @@ function GenerationStep() {
                   key={k}
                   className="card w-full bg-base-100 shadow-xl hover:shadow-2xl"
                 >
-                  {/* <div className="rounded-full inline-block border-2 flex p-3 relative">
+                  { <div className="rounded-full inline-block border-2 flex p-3 relative">
                                     <div className="absolute top-5 left-8">
                                         4
                                     </div>
-                                </div> */}
+                                </div> }
                   <div className="grid -mt-4 place-items-center">
                     <div className="w-8 h-8  rounded-full  bg-amber-500 text-slate-100 flex font-bold justify-center items-center">
                       <p>{k + 1}</p>
