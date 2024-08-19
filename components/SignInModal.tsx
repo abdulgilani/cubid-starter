@@ -109,6 +109,8 @@ function SignInModalBody({ closeModal, extraObject }) {
       });
       setLoading(false);
     }
+
+    
   };
 
   const submitForm = async (e) => {
@@ -233,7 +235,7 @@ function SignInModalBody({ closeModal, extraObject }) {
                         value: e.target.value,
                       })
                     }
-                    className="input  input-bordered border-green-500 w-full "
+                    className="input input-bordered border-red-500 w-full "
                   />
                 </div>
               )}
@@ -259,7 +261,7 @@ function SignInModalBody({ closeModal, extraObject }) {
                         value: e.target.value,
                       })
                     }
-                    className="input  input-bordered border-blue-500 w-full "
+                    className="input  input-bordered border-red-500 w-full "
                   />
                 </div>
               )}

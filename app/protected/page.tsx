@@ -51,18 +51,18 @@ export default function ProtectedPage() {
   };
 
   useEffect(() => {
-    supabase.auth.onAuthStateChange((event, session) => {
+    const handleAuthChange = async (event: any, session: any) => {
       console.log(session?.user?.email);
       if (!session?.user?.email) {
         return push("/");
       } else {
         setEmail(session?.user?.email ?? "");
+        await handleGetUuid();
       }
-    });
-  }, [supabase]);
+    };
+  }, [supabase, push]);
 
-  const handleGetUuid = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  const handleGetUuid = async () => {
     try {
       const { data: userData } = await axios.post(
         "https://passport.cubid.me/api/dapp/create_user",
@@ -130,13 +130,13 @@ export default function ProtectedPage() {
         <main className="flex-1 flex flex-col gap-6">
           <h2 className="font-bold text-4xl mb-4">Cubid Integration</h2>
           <p>{email}</p>
-          <button
+          {/*<button
             onClick={handleGetUuid}
             type="submit"
             className="btn btn-accent w-full"
           >
             Get Uuid
-          </button>
+          </button>*/}
           <button
             onClick={async (e) => {
               e.preventDefault();
