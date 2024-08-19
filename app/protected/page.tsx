@@ -51,18 +51,18 @@ export default function ProtectedPage() {
   };
 
   useEffect(() => {
-    const handleAuthChange = async (event: any, session: any) => {
+    supabase.auth.onAuthStateChange((event, session) => {
       console.log(session?.user?.email);
       if (!session?.user?.email) {
         return push("/");
       } else {
         setEmail(session?.user?.email ?? "");
-        await handleGetUuid();
       }
-    };
+    });
   }, [supabase, push]);
 
-  const handleGetUuid = async () => {
+  const handleGetUuid = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     try {
       const { data: userData } = await axios.post(
         "https://passport.cubid.me/api/dapp/create_user",
