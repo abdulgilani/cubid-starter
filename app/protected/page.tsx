@@ -59,7 +59,7 @@ export default function ProtectedPage() {
         setEmail(session?.user?.email ?? "");
       }
     });
-  }, [supabase, push]);
+  }, [push]);
 
   const handleGetUuid = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
